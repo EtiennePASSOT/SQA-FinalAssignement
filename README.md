@@ -79,3 +79,14 @@ All goals of tasks will be tests before commit.
 >- Get All answers from survey
 >
 >Time : 20 min
+
+---
+###Code Review Checklist
+
+- [ ] Unit tests and code coverage
+- [ ] Coding style and naming convention
+- [ ] New feature didn't break other feature
+- [ ] One function for one action
+- [ ] Readability (naming)
+- [ ] Avoid multiple if/else blocks
+- [ ] Same indentation everywhere
