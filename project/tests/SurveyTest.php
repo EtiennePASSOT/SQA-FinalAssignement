@@ -3,29 +3,31 @@
 declare(strict_types=1);
 
 use App\Entity\Survey;
-use App\SurveyFactory;
 use PHPUnit\Framework\TestCase;
 
-final class SurveyFactoryTests extends TestCase
+final class SurveyTests extends TestCase
 {
 
-    protected $factory;
+    protected $survey;
 
     protected function setUp(): void
     {
-        $this->factory = new SurveyFactory();
-
-        $this->factory->addSurvey("Mcdonalds", array(
-            array("label" => "Service"),
-            array("label" => "Quality")
-        ));
+        $this->survey = new Survey("KFC");
     }
 
-    public function testFindSurvey(): void
+    public function testGetName(): void
     {
-        $survey = $this->factory->getSurveyByName("Mcdonalds");
+        $name = $this->survey->getName();
 
-        $this->assertNotFalse($survey);
-        $this->assertEquals("Mcdonalds", $survey->getName());
+        $this->assertEquals("KFC", $name);
+    }
+
+    public function testAddQuestion(): void
+    {
+        $this->survey->addQuestion("Service Quality");
+        $questions = $this->survey->getQuestions();
+
+        $this->assertEquals(1, sizeof($questions));
+        $this->assertEquals("Service Quality", $questions[0]->getLabel());
     }
 }

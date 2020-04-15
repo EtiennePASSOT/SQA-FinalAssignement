@@ -10,4 +10,8 @@ final class Question
     {
         $this->label = $label;
     }
+
+    function getLabel() {
+        return $this->label;
+    }
 }

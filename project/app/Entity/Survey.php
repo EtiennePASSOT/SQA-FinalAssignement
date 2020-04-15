@@ -27,4 +27,9 @@ final class Survey
             array_push($this->questions, $question);
         else return false;
     }
+
+    function getQuestions()
+    {
+        return $this->questions;
+    }
 }
