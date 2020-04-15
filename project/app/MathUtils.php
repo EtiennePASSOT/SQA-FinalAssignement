@@ -11,6 +11,7 @@ final class MathUtils
 
     static function standardDeviation($array)
     {
+        $variance = 0.0; 
         $average = self::average($array);
         foreach ($array as $i) { 
             $variance += pow(($i - $average), 2);
