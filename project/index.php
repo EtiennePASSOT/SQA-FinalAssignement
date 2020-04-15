@@ -1,7 +1,13 @@
 <?php
 require "vendor/autoload.php";
 
-use App\Entity\Survey;
+use App\SurveyFactory;
 
-$survey = new Survey("New Survey");
-print_r($survey->getName());
+$factory = new SurveyFactory();
+
+$factory->addSurvey("Mcdonalds", array(
+    array("label" => "Service"),
+    array("label" => "Quality")
+));
+
+print_r("End!\n");
