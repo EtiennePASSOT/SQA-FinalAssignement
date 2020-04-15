@@ -1,10 +1,10 @@
 # SQA-FinalAssignement
 ---
-##Sprint Backlog
+## Sprint Backlog
 
 All goals of tasks will be tests before commit.
 
-###Sprint 1
+### Sprint 1
 
 >Task : **project initialization**
 >Goal : 
@@ -53,7 +53,7 @@ All goals of tasks will be tests before commit.
 >
 >Time : 1:20 h
 
-###Sprint 2
+### Sprint 2
 
 >Task : **Calculate the average, standard deviation, minimum score, maximum score for Answer.**
 >Goal : 
@@ -81,7 +81,7 @@ All goals of tasks will be tests before commit.
 >Time : 20 min
 
 ---
-###Code Review Checklist
+### Code Review Checklist
 
 - [ ] Unit tests and code coverage
 - [ ] Coding style and naming convention

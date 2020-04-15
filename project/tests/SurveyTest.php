@@ -9,6 +9,7 @@ final class SurveyTests extends TestCase
 {
 
     protected $survey;
+    protected $survey2;
 
     protected function setUp(): void
     {
@@ -18,6 +19,16 @@ final class SurveyTests extends TestCase
         $this->survey->addQuestion("Comfort");
         $this->survey->addQuestion("Facilities");
 
+        $this->survey2 = new Survey("Subway");
+        $this->survey2->addQuestion("Service Quality");
+        $this->survey2->addQuestion("Cleanliness");
+        $this->survey2->addQuestion("Comfort");
+        $this->survey2->addQuestion("Facilities");
+        $this->survey2->answer(array(3, 4, 4, 2));
+        $this->survey2->answer(array(5, 2, 4, 5));
+        $this->survey2->answer(array(5, 3, 5, 4));
+        $this->survey2->answer(array(4, 5, 5, 2));
+        $this->survey2->answer(array(1, 5, 2, 3));
     }
 
     public function testGetName(): void
@@ -68,5 +79,38 @@ final class SurveyTests extends TestCase
         $this->assertNotFalse($result);
         $result = $this->survey->addQuestion("11");
         $this->assertFalse($result);
+    }
+
+    public function testAverage(): void
+    {
+        $result = $this->survey2->average();
+        $this->assertEquals(3.65, $result);
+    }
+
+    public function testStandardDeviation(): void
+    {
+        $result = $this->survey2->standardDeviation();
+        $this->assertEquals(1.2757350822173075, $result);
+    }
+
+    public function testMax(): void
+    {
+        $result = $this->survey2->max();
+        $this->assertEquals(5, $result);
+    }
+
+    public function testMin(): void
+    {
+        $result = $this->survey2->min();
+        $this->assertEquals(1, $result);
+    }
+
+    public function testStatistics(): void
+    {
+        $result = $this->survey2->statistics();
+        $this->assertEquals(3.65, $result['average']);
+        $this->assertEquals(1.2757350822173075, $result['standardDeviation']);
+        $this->assertEquals(5, $result['max']);
+        $this->assertEquals(1, $result['min']);
     }
 }
