@@ -113,4 +113,14 @@ final class SurveyTests extends TestCase
         $this->assertEquals(5, $result['max']);
         $this->assertEquals(1, $result['min']);
     }
+
+    public function testGetAnswers(): void
+    {
+        $result = $this->survey2->getAnswers();
+
+        $this->assertEquals(array(3, 5, 5, 4, 1), $result['Service Quality']);
+        $this->assertEquals(array(4, 2, 3, 5, 5), $result['Cleanliness']);
+        $this->assertEquals(array(4, 4, 5, 5, 2), $result['Comfort']);
+        $this->assertEquals(array(2, 5, 4, 2, 3), $result['Facilities']);
+    }
 }

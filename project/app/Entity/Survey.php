@@ -45,6 +45,15 @@ final class Survey
         return false;
     }
 
+    function getAnswers()
+    {
+        $answers = [];
+        foreach ($this->getQuestions() as $key => $question) {
+            $answers = array_merge($answers, array($question->getLabel() => $question->getAnswers()->getMarks()));
+        }
+        return $answers;
+    }
+
     function getAllMarks()
     {
         $marks = [];
