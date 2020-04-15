@@ -10,4 +10,5 @@ $factory->addSurvey("Mcdonalds", array(
     array("label" => "Quality")
 ));
 
+print_r($factory->getSurveyByName("Mcdonalds"));
 print_r("End!\n");

@@ -17,4 +17,13 @@ final class SurveyFactory
 
         array_push($this->surveys, $survey);
     }
+
+    function getSurveyByName($name) {
+        foreach ($this->surveys as $key => $survey) {
+            if ($survey->getName() == $name) {
+                return $survey;
+            }
+        }
+        return false;
+    }
 }
