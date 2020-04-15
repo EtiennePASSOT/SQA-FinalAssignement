@@ -34,7 +34,6 @@ final class QuestionTests extends TestCase
         $this->assertFalse($result);
     }
 
-
     public function testAverage(): void
     {
         $result = $this->question->getAnswers()->average();
