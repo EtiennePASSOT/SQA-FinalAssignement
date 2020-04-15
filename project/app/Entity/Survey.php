@@ -32,4 +32,15 @@ final class Survey
     {
         return $this->questions;
     }
+
+    function answer($marks) {
+        if (sizeof($marks) == sizeof($this->questions)) {
+            foreach ($this->questions as $key => $question) {
+                $question->getAnswers()->addMark($marks[$key]);
+            }
+            return $marks;
+        }
+        return false;
+    }
+
 }
