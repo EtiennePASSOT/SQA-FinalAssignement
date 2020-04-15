@@ -27,4 +27,11 @@ final class SurveyFactoryTests extends TestCase
         $this->assertNotFalse($survey);
         $this->assertEquals("Mcdonalds", $survey->getName());
     }
+
+    public function testSurveyNotExists(): void
+    {
+        $survey = $this->factory->getSurveyByName("test");
+
+        $this->assertFalse($survey);
+    }
 }

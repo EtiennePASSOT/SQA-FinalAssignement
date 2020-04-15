@@ -20,4 +20,10 @@ final class QuestionTests extends TestCase
         $this->assertNotNull($this->question);
         $this->assertEquals("Comfortable", $this->question->getLabel());
     }
+
+    public function testQuestionBadAnswer(): void
+    {
+        $result = $this->question->getAnswers()->addMark(6);
+        $this->assertFalse($result);
+    }
 }
