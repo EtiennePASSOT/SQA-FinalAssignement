@@ -1,13 +1,31 @@
-<?php declare(strict_types=1);
+<?php
 
-use PHPUnit\Framework\TestCase;
+declare(strict_types=1);
+
 use App\Entity\Survey;
+use App\SurveyFactory;
+use PHPUnit\Framework\TestCase;
 
-final class SurveyTest extends TestCase
+final class SurveyFactoryTests extends TestCase
 {
-    public function testLoadSurvey(): void
+
+    protected $factory;
+
+    protected function setUp(): void
     {
-        $survey = new Survey("toto");
-        $this->assertEquals(true, true);
+        $this->factory = new SurveyFactory();
+
+        $this->factory->addSurvey("Mcdonalds", array(
+            array("label" => "Service"),
+            array("label" => "Quality")
+        ));
+    }
+
+    public function testFindSurvey(): void
+    {
+        $survey = $this->factory->getSurveyByName("Mcdonalds");
+
+        $this->assertNotFalse($survey);
+        $this->assertEquals("Mcdonalds", $survey->getName());
     }
 }
