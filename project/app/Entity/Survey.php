@@ -34,7 +34,8 @@ final class Survey
         return $this->questions;
     }
 
-    function answer($marks) {
+    function answer($marks)
+    {
         if (sizeof($marks) == sizeof($this->questions)) {
             foreach ($this->questions as $key => $question) {
                 $question->getAnswers()->addMark($marks[$key]);
@@ -44,7 +45,8 @@ final class Survey
         return false;
     }
 
-    function getAllMarks() {
+    function getAllMarks()
+    {
         $marks = [];
         foreach ($this->getQuestions() as $key => $question) {
             $marks = array_merge($marks, $question->getAnswers()->getMarks());
@@ -62,15 +64,18 @@ final class Survey
         return MathUtils::standardDeviation($this->getAllMarks());
     }
 
-    function max() {
+    function max()
+    {
         return MathUtils::max($this->getAllMarks());
     }
 
-    function min() {
+    function min()
+    {
         return MathUtils::min($this->getAllMarks());
     }
 
-    function statistics() {
+    function statistics()
+    {
         return array(
             "average" => $this->average(),
             "standardDeviation" => $this->standardDeviation(),
