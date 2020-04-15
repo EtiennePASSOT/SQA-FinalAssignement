@@ -21,7 +21,7 @@ final class Survey
 
     function addQuestion($label)
     {
-        $question = new Question();
+        $question = new Question($label);
 
         if (sizeof($this->questions) < 10)
             array_push($this->questions, $question);
