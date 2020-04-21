@@ -100,6 +100,11 @@ Here, you can see the result of test coverage:
 ![coverage1](code-coverage-1.png)
 ![coverage2](code-coverage-2.png)
 
+
+Code coverage represents the parts of code that are tested by unit tests. When the tests are run, each line of code where the tests are passed is noted as covered. A percentage is then created between tested and untested parts. 
+
+**/!\\** Code coverage does not necessarily mean that the tests are performed on all of the covered areas. Indeed, a test launched on a function that calls another one will test the return of the parent function and not necessarily the son function. The coverage will still be done on the daughter function. It is therefore more judicious to test each piece of code separately even if when the returns of the parent function are valid, we can consider that the daughter function is valid too.
+
 ---
 ### GitFlow
 
