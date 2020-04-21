@@ -81,6 +81,14 @@ All goals of tasks will be tests before commit.
 >Time : 20 min
 
 ---
+### Test Driven
+
+Unfortunately, I didn't understand the "test driven" translation in French before developing the project. So I will explain the interest of this process but I won't have an example.
+
+The principle of test-driven is to write the unit tests before developing the feature. This process allows to have a different approach in the realization of a feature and to meet all the needs that the feature must complete.
+The resulting software is both designed to meet the need accurately and to do so with minimal complexity. The result is software that is better designed, better tested and more reliable, in other words, of better quality.
+
+---
 ### Test Coverage
 
 Test coverage are made with PHPunit and can be launched like this (after install all packages)
