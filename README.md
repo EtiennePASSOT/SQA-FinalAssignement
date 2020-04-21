@@ -139,3 +139,16 @@ exemple of pull request :
 [Pull-request 1](https://github.com/EtiennePASSOT/SQA-FinalAssignement/pull/5)
 [Pull-request 2](https://github.com/EtiennePASSOT/SQA-FinalAssignement/pull/6)
 [Pull-request 3](https://github.com/EtiennePASSOT/SQA-FinalAssignement/pull/7)
+
+**Explanation of PR 3 :**
+
+A pull-request has been requested for merge Feature/statistics in develop.
+
+We add the checklist in the pull-request and check the boxes one by one checking all the requested information in all the files. (here, we can see the proof of code coverage)
+
+There are two indentation errors found by the reviewer.
+The author of the pull request corrects the errors.
+The reviewers recheck all points on the changes made by the new commit.
+If everything is checked and committed, then the PR can be merged into the Develop branch.
+
+![pr](pr.png)
