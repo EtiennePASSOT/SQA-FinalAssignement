@@ -90,3 +90,8 @@ All goals of tasks will be tests before commit.
 - [ ] Readability (naming)
 - [ ] Avoid multiple if/else blocks
 - [ ] Same indentation everywhere
+
+exemple of pull request :
+[Pull-request 1](https://github.com/EtiennePASSOT/SQA-FinalAssignement/pull/5)
+[Pull-request 2](https://github.com/EtiennePASSOT/SQA-FinalAssignement/pull/6)
+[Pull-request 3](https://github.com/EtiennePASSOT/SQA-FinalAssignement/pull/7)
