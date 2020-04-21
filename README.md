@@ -111,6 +111,19 @@ When a stable version is ready on Develop, it is merged into Master.
 The Master branch only describes stable releases. All merges on this branch are described by a tag which is a functional version of the project.
 If we encounter a bug, we create a hotfix branch named to describe the version change (example: v1.0.0 -> v1.0.1 so the branch will be named v1.0.1) then it is merged in Master and in Develop.
 
+![gitflow](git-flow.png)
+
+Here you can see part of the GitFlow process.
+
+In Light Blue: Master
+In Dark Blue: Hotfix
+In Violet: Develop
+En Rose : Feature
+
+In chronological order, the Feature branch described by the pink commits is under development.
+Meanwhile, the Develop branch is merged into master. A Hotfix branch is opened from master which is then merged into master and into Develop. The Feature is also merged into Develop.
+
+
 ---
 ### Code Review Checklist
 
