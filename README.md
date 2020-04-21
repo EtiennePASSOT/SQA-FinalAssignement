@@ -81,6 +81,18 @@ All goals of tasks will be tests before commit.
 >Time : 20 min
 
 ---
+### Test Coverage
+
+Test coverage are made with PHPunit and can be launched like this (after install all packages)
+```
+./vendor/phpunit/phpunit/phpunit tests/ --coverage-html coverage --whitelist app/
+```
+
+Here, you can see the result of test coverage:
+![coverage1](code-coverage-1.png)
+![coverage2](code-coverage-2.png)
+
+---
 ### GitFlow
 
 For the smooth running of this project, I followed the GitFlow process.
