@@ -81,6 +81,17 @@ All goals of tasks will be tests before commit.
 >Time : 20 min
 
 ---
+### GitFlow
+
+For the smooth running of this project, I followed the GitFlow process.
+
+The Develop branch describes the development phases with the addition of features.
+Each feature is developed in a separate branch (for example: features/statistics, features/answersFromSurvey, features/documentation) and then merged into the Develop branch.
+When a stable version is ready on Develop, it is merged into Master.
+The Master branch only describes stable releases. All merges on this branch are described by a tag which is a functional version of the project.
+If we encounter a bug, we create a hotfix branch named to describe the version change (example: v1.0.0 -> v1.0.1 so the branch will be named v1.0.1) then it is merged in Master and in Develop.
+
+---
 ### Code Review Checklist
 
 - [ ] Unit tests and code coverage
