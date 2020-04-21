@@ -100,6 +100,11 @@ Here, you can see the result of test coverage:
 ![coverage1](code-coverage-1.png)
 ![coverage2](code-coverage-2.png)
 
+
+Code coverage represents the parts of code that are tested by unit tests. When the tests are run, each line of code where the tests are passed is noted as covered. A percentage is then created between tested and untested parts. 
+
+**/!\\** Code coverage does not necessarily mean that the tests are performed on all of the covered areas. Indeed, a test launched on a function that calls another one will test the return of the parent function and not necessarily the son function. The coverage will still be done on the daughter function. It is therefore more judicious to test each piece of code separately even if when the returns of the parent function are valid, we can consider that the daughter function is valid too.
+
 ---
 ### GitFlow
 
@@ -110,6 +115,19 @@ Each feature is developed in a separate branch (for example: features/statistics
 When a stable version is ready on Develop, it is merged into Master.
 The Master branch only describes stable releases. All merges on this branch are described by a tag which is a functional version of the project.
 If we encounter a bug, we create a hotfix branch named to describe the version change (example: v1.0.0 -> v1.0.1 so the branch will be named v1.0.1) then it is merged in Master and in Develop.
+
+![gitflow](git-flow.png)
+
+Here you can see part of the GitFlow process.
+
+In Light Blue: Master
+In Dark Blue: Hotfix
+In Violet: Develop
+En Rose : Feature
+
+In chronological order, the Feature branch described by the pink commits is under development.
+Meanwhile, the Develop branch is merged into master. A Hotfix branch is opened from master which is then merged into master and into Develop. The Feature is also merged into Develop.
+
 
 ---
 ### Code Review Checklist
@@ -126,3 +144,16 @@ exemple of pull request :
 [Pull-request 1](https://github.com/EtiennePASSOT/SQA-FinalAssignement/pull/5)
 [Pull-request 2](https://github.com/EtiennePASSOT/SQA-FinalAssignement/pull/6)
 [Pull-request 3](https://github.com/EtiennePASSOT/SQA-FinalAssignement/pull/7)
+
+**Explanation of PR 3 :**
+
+A pull-request has been requested for merge Feature/statistics in develop.
+
+We add the checklist in the pull-request and check the boxes one by one checking all the requested information in all the files. (here, we can see the proof of code coverage)
+
+There are two indentation errors found by the reviewer.
+The author of the pull request corrects the errors.
+The reviewers recheck all points on the changes made by the new commit.
+If everything is checked and committed, then the PR can be merged into the Develop branch.
+
+![pr](pr.png)
