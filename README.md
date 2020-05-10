@@ -1,5 +1,26 @@
 # SQA-FinalAssignement
 ---
+## How to launch units tests
+
+You need to install composer :
+[Install composer](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-macos)
+
+
+go to /project folder
+
+run composer to install all dependencies of the project
+```
+composer install
+```
+
+run units tests :
+```
+./vendor/phpunit/phpunit/phpunit tests/
+```
+
+
+
+---
 ## Sprint Backlog
 
 All goals of tasks will be tests before commit.
